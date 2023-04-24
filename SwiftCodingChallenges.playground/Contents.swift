@@ -16,14 +16,7 @@ import XCTest
  */
 
 func hasUniqueLetters(string: String) -> Bool {
-    var uniqueString = Set<Character>()
-    string.forEach( { uniqueString.insert($0) } )
-    
-    if uniqueString.count == string.count {
-        return true
-    } else {
-        return false
-    }
+    Set(string).count == string.count
 }
 
 class Challenge_1_tests: XCTestCase {
